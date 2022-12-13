@@ -1,0 +1,24 @@
+/*Да се напише програма која за две низи кои се внесуваат од тастатура ќе провери дали се еднакви или не. 
+На екран да се испачати резултатот од споредбата. Максимална големина на низите е 100*/
+#include <stdio.h>
+int main()
+{
+    int n1, n2, a[100], b[100], i;
+    scanf("%d, %d", &n1, &n2);
+    if(n1!=n2) printf("Nizite ne se ednakvi\n");
+    else {
+        for(i=0; i<n1; i++){
+            scanf("%d", &a[i])
+        }
+        for(i=0; i<n2; i++){
+            scanf("%d", &b[i])
+        }
+        for(i=0; i<n1; i++){
+            if(a[i]!=b[i]) break;
+            if(i==n1) printf("Nizite se ednakvi\n");
+            else printf("Nizite ne se ednakvi\n");
+        }
+    }
+
+    return 0;
+}
