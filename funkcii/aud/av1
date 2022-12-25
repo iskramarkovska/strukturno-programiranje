@@ -1,0 +1,29 @@
+/*Да се напишат соодветни функции за пресметување на дијаметар, периметар и плоштина на круг чиј што радиус се предава како аргумент. Потоа да се
+напише и програма во која за внесен (од тастатура) радиус ќе се повикаат овие функции за да се пресметаат дијаметарот, периметарот и плоштината на
+соодветниот круг*/
+#include <stdio.h>
+#define pi 3.14
+double dijametar(double radius);
+double perimetar(double radius);
+double plostina(double radius);
+
+int main(){
+    double radius, p, l, d;
+    printf("Vnesi radius: ");
+    scanf("%lf", &radius);
+    
+    d=dijametar(radius);
+    l=perimetar(radius);
+    p=plostina(radius);
+    printf("Dijametar: %.2f, perimetar: %.2f, plostina: %.2f", d, l, p);
+    return 0;
+}
+double dijametar(double radius){
+    return 2*radius;
+}
+double perimetar(double radius){
+    return 2*pi*radius;
+}
+double plostina(double radius){
+    return radius*radius*pi;
+}
